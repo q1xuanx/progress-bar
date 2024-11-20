@@ -20,6 +20,16 @@ public class Main {
         }
     }
 }
+
+public void makeProgress(int current) throws InterruptedException {
+        StringBuilder tempSb = new StringBuilder(sb);
+        int completed = (current * maxBarLength) / maxInternal;
+        for (int j = 1; j <= completed; j++){
+            tempSb.setCharAt(j, '=');
+        }
+        System.out.print("\r" + tempSb + " " + current + "/" + maxInternal);
+        Thread.sleep(10); // change this to make progress faster or slower 
+    }
 ```
 ## 📥Dowload file jar here:
 - Get the latest version of the progress bar JAR file: [Progress bar](https://drive.google.com/file/d/18PmvS8LOqWZZYfJbCW_rd9P_t5d3YQ4U/view?usp=sharing)
